@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-row top>
+      <ion-title>
+         <ion-text> Informações </ion-text> 
+      </ion-title> 
+    <ion-img style="width: 40px; height: 40px;" src="/assets/brasãoUFT.png"></ion-img> 
+   </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-segment [(ngModel)]="info">
+      <ion-segment-button value="vaga"> Vagas </ion-segment-button>
+      <ion-segment-button value="edital"> Inscrição </ion-segment-button>
+    </ion-segment>
+    
+    <div [ngSwitch]="info">
+      <ion-list *ngSwitchCase="'edital'">
+          <ion-item>
+            <ion-icon style="width: 25px; height: 25px;" name="information-circle" slot="start"></ion-icon>
+            Enviar os documentos pro email até as 23:59 do dia 19/05/2019
+            </ion-item>
+        <ion-item>
+          <ion-icon style="width: 25px; height: 25px;" name="albums" slot="start"></ion-icon>
+            Curriculo, comprovante de matrícula e copia da identidade
+        </ion-item>
+        <ion-item>
+          <ion-icon style="width: 25px; height: 25px;" name="at" slot="start"></ion-icon>
+            fabricadesoftware@uft.edu.br
+        </ion-item>
+        <ion-item>
+            <ion-icon style="width: 25px; height: 25px;" name="calendar" slot="start"></ion-icon>
+              Inscrições: 10/05 á 19/05
+             <br> Resultado: 20/05/2019
+             <br> Entrevistas: 21/05/2019
+             <br> Resultado final: 22/05/2019
+          </ion-item>
+          <ion-button shape="block" fill="outline">Baixar edital</ion-button>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'vaga'">
+        <ion-item>
+          <ion-icon style="width: 25px; height: 25px;" name="pin" slot="start"></ion-icon>
+            Palmas, TO
+        </ion-item>
+        <ion-item>
+            <ion-icon style="width: 25px; height: 25px;" name="briefcase" slot="start"></ion-icon>
+            Fabrica de Software - UFT
+        </ion-item>
+        <ion-item>
+            <ion-icon style="width: 25px; height: 25px;" name="add-circle" slot="start"></ion-icon>
+           2 vagas
+        </ion-item>
+        <ion-item>
+            <ion-icon style="width: 25px; height: 25px;" name="school" slot="start"></ion-icon>
+          Ciência da Computação, Sistemas de Informação e Jornalismo
+        </ion-item>
+        <ion-item>
+            <ion-icon style="width: 25px; height: 25px;" name="cash" slot="start"></ion-icon>
+           600 + Bolsa Saúde 
+        </ion-item>
+        <ion-item>
+            <ion-icon style="width: 25px; height: 25px;" name="bookmark" slot="start"></ion-icon>
+           1º ao 5º Período 
+        </ion-item>
+        <ion-item>
+            <ion-icon style="width: 25px; height: 25px;" name="person" slot="start"></ion-icon>
+            Requisitos: Conhecimento no pacote office, formatação, e manutenção de computadores, além de boa comunicação, responsável e vontade de aprender 
+        </ion-item>
+        <ion-item>
+            <ion-icon style="width: 25px; height: 25px;" name="information-circle" slot="start"></ion-icon>
+            Auxiliar na gestão de redes sociais, publicação de posts, acompanhamento de reação e público alvo. Criação e acompanhamento de postagens em redes sociais.
+        </ion-item>
+        <ion-button shape="block" fill="outline">Baixar edital</ion-button>
+      </ion-list>
+    
+    </div>
+   
+  </ion-content>

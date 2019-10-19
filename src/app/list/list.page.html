@@ -1,0 +1,101 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-row top>
+          <ion-title>
+             <ion-text> Orientações </ion-text> 
+          </ion-title> 
+        <ion-img style="width: 40px; height: 40px;" src="/assets/brasãoUFT.png"></ion-img> 
+       </ion-row>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-segment [(ngModel)]="estagio">
+    <ion-segment-button value="sim"> Obrigatório </ion-segment-button>
+    <ion-segment-button value="nao"> Não Obrigatório </ion-segment-button>
+  </ion-segment>
+  
+  <div [ngSwitch]="estagio">
+    <ion-list *ngSwitchCase="'nao'">
+      <ion-item>
+        <ion-icon style="width: 25px; height: 25px;" name="information-circle" slot="start"></ion-icon>
+       <b> Os documentos necessários para efetivar o estágio obrigatório estão disponíveis na aba Documentos </b>
+       <br>
+      </ion-item>
+      <br>
+      <ion-item>
+          Documentos para iniciar o estágio:
+          <ion-icon style="width: 25px; height: 25px;" name="document" slot="start"></ion-icon>
+          <br> 
+            1- Termo de Compromisso <br>
+            2- Plano de Atividades  <br>
+      </ion-item>
+        
+      <ion-item>
+        <ion-icon style="width: 25px; height: 25px;" name="arrow-dropright" slot="start"></ion-icon>
+        <br>
+        Todos os documentos deverão ser preenchidos e impressos em três vias, na qual cada
+      interessado ficará com uma via do documento: Central de Estágios, Unidade
+      Concedente e Aluno.
+      <br>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-icon style="width: 25px; height: 25px;" name="arrow-dropright" slot="start"></ion-icon>
+        No Termo de Compromisso, a cláusula 11ª deve ser preenchida com o número do
+        seguro contra acidentes pessoais, o qual está disponível na Central de Estágios.
+        <br>
+      </ion-item>
+      <ion-item>
+          <br>
+        <ion-icon style="width: 25px; height: 25px;" name="arrow-dropright" slot="start"></ion-icon>
+        Quem assinará o Termo de Compromisso serão os representantes legais da Instituição
+de Ensino, Unidade Concedente e Aluno estagiário.
+      </ion-item>
+      <ion-item>
+        <ion-icon style="width: 25px; height: 25px;" name="arrow-dropright" slot="start"></ion-icon>
+        <br>
+        Quem assinará o plano de atividades será o professor orientador da UFT, supervisor da
+        unidade concedente e aluno estagiário.
+          <br>
+      </ion-item>
+      <br>
+      <ion-item>
+        
+          Documentos para finalizar o estágio:
+          <ion-icon style="width: 25px; height: 25px;" name="document" slot="start"></ion-icon>
+          <br> 
+            3- Relatório de Estágio<br>
+            4- Ficha de avaliação do supervisor<br>
+            5- Termo de Realização de estágio.<br>
+      </ion-item>
+  <ion-item>
+          <ion-icon style="width: 25px; height: 25px;" name="arrow-dropright" slot="start"></ion-icon>
+          <br>
+      O Relatório de estágio será preenchido pelo aluno estagiário e assinado pelo Professor
+Orientador e pelo Supervisor da unidade Concedente.
+  </ion-item>
+
+  <ion-item>
+      <ion-icon style="width: 25px; height: 25px;" name="arrow-dropright" slot="start"></ion-icon>
+      <br>
+  A Ficha de avaliação do Supervisor e o Termo de Realização de Estágio deverão ser
+  preenchidos e assinados pelo supervisor do estágio na unidade concedente.
+  </ion-item>
+
+  <ion-item>
+      <ion-icon style="width: 25px; height: 25px;" name="arrow-dropright" slot="start"></ion-icon>
+      <br>
+  Todos os documentos deverão ser preenchidos e impressos em três vias, na qual cada
+  interessado
+  </ion-item>
+
+</ion-list>
+    <ion-list *ngSwitchCase="'sim'">
+     
+    </ion-list>
+  </div>
+</ion-content>

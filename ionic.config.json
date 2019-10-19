@@ -1,0 +1,7 @@
+{
+  "name": "Central",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
